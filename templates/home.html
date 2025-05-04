@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+        <h1 class="text-3xl font-bold text-gray-900">Welcome to the Pizzeria App</h1>
+        <p class="mt-1 max-w-2xl text-sm text-gray-500">Your one-stop shop for delicious pizzas!</p>
+    </div>
+    <div class="px-4 py-5 sm:p-6">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <h2 class="text-xl font-semibold text-gray-800">View Our Menu</h2>
+                    <p class="mt-2 text-gray-600">Check out our delicious pizza options and more.</p>
+                    <div class="mt-4">
+                        <a href="{% url 'menu' %}"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700">
+                            View Menu
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <h2 class="text-xl font-semibold text-gray-800">Admin Dashboard</h2>
+                    <p class="mt-2 text-gray-600">Manage your menu items and categories.</p>
+                    <div class="mt-4">
+                        <a href="{% url 'login' %}"
+                            class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
